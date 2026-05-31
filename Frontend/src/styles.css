@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-sky-50 text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply outline-none;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-white/80 bg-white shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-all duration-200 dark:border-slate-800 dark:bg-slate-900 dark:shadow-black/20;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition-all duration-200 hover:bg-sky-500 disabled:cursor-not-allowed disabled:opacity-70;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-sky-100 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition-all duration-200 hover:bg-sky-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-950 shadow-sm transition-all duration-200 placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder:text-slate-500 dark:focus:border-indigo-400 dark:focus:ring-indigo-500/20;
+  }
+
+  .label {
+    @apply mb-2 block text-sm font-semibold text-slate-700 dark:text-slate-200;
+  }
+
+  .travel-surface {
+    @apply rounded-2xl border border-white/80 bg-white/90 shadow-[0_18px_50px_rgba(14,116,144,0.12)] backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 dark:shadow-black/20;
+  }
+
+  .travel-hero {
+    @apply rounded-3xl border border-white/70 bg-gradient-to-br from-sky-100 via-white to-emerald-100 shadow-[0_22px_60px_rgba(14,116,144,0.14)] dark:border-slate-800 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
