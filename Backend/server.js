@@ -1,4 +1,4 @@
-import './config/env.js';
+import './config/env.js'; // CORS restart trigger
 import exp from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
